@@ -1,5 +1,5 @@
 import express from 'express'
-import { createBatchController, updateBatchController, deleteBatchController } from '../controllers/student.controller.js'
+import { createBatchController, updateBatchController, deleteBatchController } from '../controllers/batch.controller.js'
 import validate from '../../config/validate.js'
 import {createBatchSchema, updateBatchSchema} from '../schemas/batch.scema.js'
 

@@ -2,9 +2,10 @@ import mongoose from "mongoose";
 
 const studentModel = new mongoose.Schema(
   {
-    studenId: {
+    studentId: {
       type: Number,
-      unique:true
+      unique:true,
+      required: true
     },
     fullName: {
       type: String,
@@ -20,7 +21,7 @@ const studentModel = new mongoose.Schema(
     },
     phone: {
       type: Number,
-      requie: true,
+      required: true,
     },
     batch: {
       type: String,
