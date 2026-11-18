@@ -20,19 +20,16 @@ const studentModel = new mongoose.Schema(
       unique: true
     },
     phone: {
-      type: Number,
+      type: String,
       required: true,
+      unique: true
     },
     batch: {
-      type: String,
-      required: true,
-    },
-    batchName:{
-      type: String,
-      required: true
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "batch"
     },
     address: {
-      disctrict: {
+      district: {
         type: String,
         required: true,
       },

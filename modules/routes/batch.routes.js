@@ -1,6 +1,6 @@
 import express from 'express'
 import { createBatchController, updateBatchController, deleteBatchController } from '../controllers/batch.controller.js'
-import validate from '../../config/validate.js'
+import validate from '../../middleware/validate.js'
 import {createBatchSchema, updateBatchSchema} from '../schemas/batch.scema.js'
 
 const router = express.Router()

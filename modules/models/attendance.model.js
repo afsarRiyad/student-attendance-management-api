@@ -2,22 +2,21 @@ import mongoose from "mongoose";
 
 const attendanceModel = new mongoose.Schema({
     classNo: {
+        type: Number,
+        required: true,
+        unique: true
+    },
+    batchName: {
         type: String,
         required: true
     },
-    batch: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "batch",
+    classDate: {
+        type: Date,
         required: true
     },
     students: [{
-        studentID: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "student",
-            required: true
-        },
-        classDate: {
-            type: Date,
+        studentId: {
+            type: Number,
             required: true
         },
         homeWork: {
@@ -25,7 +24,7 @@ const attendanceModel = new mongoose.Schema({
             enum: ["done", "not done"],
             default: "not done"
         },
-        attendance: {
+        attendanceStatus: {
             type: String,
             enum: ["present", "absent"],
             default: "absent"
